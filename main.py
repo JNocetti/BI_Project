@@ -1,9 +1,7 @@
 import pandas as pd
-import numpy as np
 
 data = pd.read_excel('Proyecto_final_IN2023.xlsx')
 missingData = data.isnull().sum()
-
 print("Data sin imputaciones ",missingData)
 
 # Imputación de datos
@@ -20,4 +18,3 @@ print(stats)
 
 # Creamos un nuevo dataframe sin datos nulos
 data.to_excel('Proyecto_final_IN2023_update.xlsx', index=False)
-
